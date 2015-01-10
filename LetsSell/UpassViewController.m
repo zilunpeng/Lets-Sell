@@ -179,13 +179,13 @@
     
     [self retrieveUserNameAndLink];
     
-    //if ([self isLoggedIn] && ![self isPriceValid:price] && [self isUbcStudent]) {
+    if ([self isLoggedIn] && ![self isPriceValid:price] && [self isUbcStudent]) {
         NSDictionary *upass = @{@"month": month, @"price": price, @"name": self.userName, @"link": self.userFacebookProfile, @"phone": self.phone.text ,@"type": @"Upass"};
         [self.todoService addUpass:upass completion:^(NSUInteger index)
          {
          }];
     [self displaySuccessMsg];
-    //}
+    }
 }
 
 - (void)didReceiveMemoryWarning {

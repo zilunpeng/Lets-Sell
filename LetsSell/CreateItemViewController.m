@@ -208,7 +208,7 @@
     
     [self retrieveUserNameAndLink];
     
-    //if ([self isLoggedIn] && [self isFormValid] && [self isUbcStudent]) {
+    if ([self isLoggedIn] && [self isFormValid] && [self isUbcStudent]) {
         NSString *department = [self getSelectedDepartment];
         NSDictionary *item = @{ @"department": department,@"course": _Course.text,@"title": _Title.text,
                                 @"name": self.userName, @"link": self.userFacebookProfile,
@@ -218,7 +218,7 @@
          {
          }];
     [self displaySuccessMsg];
-    //}
+    }
     
     //clear data
     _Course.text = @"";
