@@ -104,10 +104,10 @@
 }
 
 - (bool) isUbcStudent {
-    if ([self.userEducation isEqualToString: @"University of British Columbia"]) {
-        return true;
+    if ([self.userEducation rangeOfString: @"University of British Columbia"].location == NSNotFound) {
+        return false;
     }
-    return false;
+    return true;
 }
 
 - (void) displayUBCStudentErrorMsg
