@@ -26,6 +26,7 @@
 @property NSString *userEducation;
 @property NSString *userName;
 @property NSString *userFacebookProfile;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @end
 
 @implementation CreateItemViewController
@@ -33,6 +34,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
+    [self.scrollView setScrollEnabled:YES];
+    [self.scrollView setContentSize:(CGSizeMake(320, 600))];
 
     // Initialize Data
     pickerData = [Departments getAllDepartments];
@@ -225,6 +233,14 @@
     _PhoneNumber.text = @"";
     _Price.text = @"";
     _Title.text = @"";
+}
+
+-(void)dismissKeyboard {
+    [_Course resignFirstResponder];
+    [_PhoneNumber resignFirstResponder];
+    [_Price resignFirstResponder];
+    [_Title resignFirstResponder];
+    
 }
 
 @end

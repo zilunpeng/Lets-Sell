@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 
 @interface MasterViewController : UITableViewController
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 

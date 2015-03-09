@@ -60,6 +60,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self refresh];
 }
 
@@ -240,7 +241,7 @@
     
     [self updateFilteredContentForProductName:searchString type:self.scope];
     
-    [self.tableView reloadData];
+    [self refresh];
 }
 
 #pragma mark - UISearchBarDelegate
@@ -273,11 +274,11 @@
                     [searchResults addObject:item];
                 }
             }
+
             self.searchResults = searchResults;
         }
         return;
     }
-    
     
     [self.searchResults removeAllObjects]; // First clear the filtered array.
     
