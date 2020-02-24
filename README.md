@@ -1,6 +1,9 @@
-# Lets-Sell
-Application key for windows azure services is removed 
+# Let's Sell
+This application allows users to sell text books and upass (transist pass for students). Users can add items for sales, search items, save items to their watch lists, and log in by authenticating their social network accounts. This app was on the ios app store for a year.
 
-Facebook app ID is using the demo ID that Facebook provides to the public
-
-Visit our Facebook page: https://www.facebook.com/LetsSell0001
+<p align="left">
+  <img height=300 src="imgs/1.png">
+  <img height=300 src="imgs/2.png">
+  <img height=300 src="imgs/3.png">
+  <img height=300 src="imgs/4.png">
+</p>
