@@ -1,4 +1,4 @@
-# Let's Sell
+# Let's Sell - An IOS Application
 This application allows users to sell text books and upass (transist pass for students). Users can add items for sales, search items, save items to their watch lists, and log in by authenticating their social network accounts. This app was on the ios app store for a year.
 
 <p align="left">
